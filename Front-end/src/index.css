@@ -1,0 +1,465 @@
+/* Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+/* Left info panel */
+.login-left {
+  margin-right: 50px;
+  max-width: 400px;
+}
+
+.login-left h2 {
+  font-size: 24px;
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.login-left h3 {
+  font-size: 18px;
+  color: #374151;
+}
+
+/* Form */
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 350px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1d4ed8;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #1d4ed8;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.options label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.options a {
+  font-size: 14px;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #2563eb;
+}
+
+.login-form button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Error/Success */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  margin-bottom: 10px;
+}
+
+
+/* Sidebar container */
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* light gray */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar header */
+.admin-sidebar h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d4ed8; /* blue */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sidebar links */
+.admin-sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #374151; /* gray-700 */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.admin-sidebar .nav-link:hover {
+  background-color: #e0e7ff; /* light blue */
+  color: #1d4ed8;
+}
+
+/* Active link */
+.admin-sidebar .nav-link.active {
+  background-color: #1d4ed8; /* blue */
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Icons in links */
+.admin-sidebar .nav-link svg {
+  font-size: 18px;
+}
+
+/* Logout button/link styling */
+.admin-sidebar .logout {
+  margin-top: auto; /* stick to bottom */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #dc2626; /* red */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-sidebar .logout:hover {
+  background-color: #fee2e2; /* light red */
+}
+
+/* Full dashboard container */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Sidebar */
+.dashboard-container > .admin-sidebar {
+  flex-shrink: 0;
+}
+
+/* Main content area */
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  background-color: #2563eb; /* New blue background */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+ 
+}
+
+/* Content below navbar */
+.dashboard-content {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  
+}
+
+.summary-container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.summary-container h2 {
+  margin-bottom: 15px;
+  color: #1d4ed8;
+}
+
+/* Container for each summary card */
+.summery-card {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6; /* light gray */
+  padding: 12px;
+  border-radius: 8px;
+  min-width: 180px;      
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 6px;
+}
+
+.summery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Icon container */
+.summery-card .icon-container {
+  font-size: 48px;
+  color: #1d4ed8; /* blue */
+  margin-right: 18px;
+}
+
+/* Text container */
+.summery-card .text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.summery-card .text-container p {
+  margin: 0;
+}
+
+.summery-card .text-container .card-text {
+  font-size: 16px;
+  color: #374151; /* gray-700 */
+}
+
+.summery-card .text-container .card-number {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1d4ed8; /* blue */
+}
+/* Full-width top navbar */
+.top-navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1d4ed8; /* blue background */
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky; /* stays on top */
+  top: 0;
+  z-index: 1000;
+  border-radius: 12px 4px ;
+}
+
+/* Left side */
+.navbar-left h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Right side */
+.navbar-right p {
+  margin: 0;
+  font-size: 16px;
+}
+.course-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Header with title and button */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.course-header h3 {
+  margin: 0;
+  color: #1d4ed8;
+}
+
+.add-course-btn {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.add-course-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Search input */
+.course-search {
+  margin-bottom: 20px;
+}
+
+.course-search input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.course-search input:focus {
+  border-color: #1d4ed8;
+}
+
+/* Placeholder table */
+.course-table {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #374151;
+  font-size: 16px;
+}
+.add-course-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto; /* center the form */
+}
+
+.add-course-container h3 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-course-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.add-course-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+.add-course-form input,
+.add-course-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.add-course-form input:focus,
+.add-course-form textarea:focus {
+  border-color: #1d4ed8;
+}
+
+.add-course-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-submit {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #2563eb;
+}
+
+.btn-cancel {
+  background-color: #9ca3af; /* gray */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #6b7280;
+}
