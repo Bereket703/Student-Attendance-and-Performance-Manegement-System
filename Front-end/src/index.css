@@ -1,3 +1,4 @@
+
 /* Container */
 .login-container {
   display: flex;
@@ -225,7 +226,7 @@
 
 /* Content below navbar */
 .dashboard-content {
-  padding: 20px;
+  padding: 10px;
   flex: 1;
   overflow-y: auto;
   
@@ -462,4 +463,160 @@
 
 .btn-cancel:hover {
   background-color: #6b7280;
+
 }
+.btn-edit {
+    background-color: green;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .btn-delete {
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .btn-edit:hover {
+    background-color: darkgreen;
+  }
+
+  .btn-delete:hover {
+    background-color: darkred;
+  }
+  /* Style the container div */
+.data-table-container {
+  padding: 20px;
+  background-color: #f9fafb; /* light gray */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Style table rows */
+.data-table-container .rdt_TableRow {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table-container .rdt_TableRow:hover {
+  background-color: #f1f5f9; /* hover highlight */
+}
+
+/* Style table headers */
+.data-table-container .rdt_TableCol {
+  font-weight: bold;
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Pagination styling */
+.data-table-container .rdt_Pagination {
+  margin-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Container */
+.add-teacher-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-teacher-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Form */
+.add-teacher-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 5px rgba(76, 175, 239, 0.3);
+}
+
+/* File input */
+.form-group input[type="file"] {
+  border: none;
+  padding: 5px 0;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-submit,
+.btn-cancel {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit {
+  background: #4cafef;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-submit:hover {
+  background: #3a9ed9;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #d9342b;
+  transform: translateY(-2px);
+}
+

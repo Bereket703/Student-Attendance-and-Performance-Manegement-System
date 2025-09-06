@@ -10,13 +10,16 @@ const AdminDashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <div className="dashboard-content">
-        <AdminSidebar />
-      </div>
-      <div className="dashboard-main">
+    
+       <div className="dashboard-content" >
+         <AdminSidebar/>
+        </div>
+    
+       <div className="dashboard-main">
         <NavBar />
-        <Outlet />
+        <Outlet/>
       </div>
+
     </div>
   );
 };

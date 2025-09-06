@@ -8,6 +8,9 @@ import AdminSummary from "./components/dashboard/AdminSummery.jsx"
 import StudentList from "./components/students/StudentList.jsx"
 import CourseList from "./components/courses/CourseList.jsx"
 import AddCourse from "./components/courses/AddCourse.jsx"
+import EditCourse from "./components/courses/EditCourse.jsx"
+import List from './components/teachers/List.jsx'
+import Add from './components/teachers/Add.jsx'
 
 
 function App() {
@@ -31,6 +34,9 @@ function App() {
         <Route path="/admin-dashboard/students" element={<StudentList/>} ></Route>
         <Route path="/admin-dashboard/course" element={<CourseList/>} ></Route>
         <Route path="/admin-dashboard/add-course" element={<AddCourse/>} ></Route>
+        <Route path="/admin-dashboard/course/:id" element={<EditCourse/>} ></Route>
+        <Route path="/admin-dashboard/teacher" element={<List />} ></Route>
+        <Route path="/admin-dashboard/add-teacher" element={<Add/>} ></Route>
       </Route>
 
     <Route path="/attendance-checker-dashboard" element={<AttendanceCheckerDashboard/>}></Route>

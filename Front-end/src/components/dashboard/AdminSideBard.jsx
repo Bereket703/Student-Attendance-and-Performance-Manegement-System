@@ -33,7 +33,7 @@ const AdminSidebar = () => {
         <FaUserGraduate /><span>Manage Students</span>
       </NavLink>
 
-      <NavLink to="/admin-dashboard/teachers" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>
+      <NavLink to="/admin-dashboard/teacher" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>
         <FaChalkboardTeacher /><span>Manage Teachers</span>
       </NavLink>
 

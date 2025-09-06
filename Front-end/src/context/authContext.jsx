@@ -30,8 +30,16 @@ const AuthContextProvider = ({ children }) => {
           setUser(null);
         }
       } catch (error) {
-        console.error("Verification error:", error);
-        setUser(null);
+  if (error.response) {
+    console.error("Verification failed:", error.response.data.message || error.response.data);
+  } else if (error.request) {
+    console.error("No response received from server:", error.request);
+  } else {
+    console.error("Error setting up request:", error.message);
+  }
+  setUser(null);
+
+
       } finally {
         setLoading(false);
       }
@@ -50,10 +58,11 @@ const AuthContextProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout, loading }}>
-      {children}
-    </UserContext.Provider>
-  );
+  <UserContext.Provider value={{ user, login, logout, loading }}>
+    {loading ? <div>Loading...</div> : children}
+  </UserContext.Provider>
+);
+
 };
 
 export const useAuth = () => useContext(UserContext);
